@@ -1,0 +1,55 @@
+ Jul-31-2021 12:28:27: Path: /orders/user, Error: getaddrinfo ENOTFOUND chunee.db.elephantsql.com 
+ Jul-31-2021 12:29:36: Path: /orders/user, Error: getaddrinfo ENOTFOUND chunee.db.elephantsql.com 
+ Jul-31-2021 12:43:34: Path: /orders/user, TypeError: dbClient.query is not a function
+ Jul-31-2021 13:31:08: Path: /orders, Error: Table order-items does not have a column or property named quantity
+ Jul-31-2021 13:32:42: Path: /orders, Error: Table order-items does not have a column or property named quantity
+ Jul-31-2021 13:33:40: Path: /orders, Error: Table order-items does not have a column or property named quantity
+ Jul-31-2021 13:37:58: Path: /orders, error: relation "order-items" does not exist
+ Jul-31-2021 13:39:04: Path: /orders, error: relation "OrderItems" does not exist
+ Jul-31-2021 13:39:56: Path: /orders, error: relation "OrderItems" does not exist
+ Jul-31-2021 13:41:31: Path: /orders, Error: Table OrderItems does not have a column or property named items
+ Jul-31-2021 13:42:41: Path: /orders, error: relation "OrderItems" does not exist
+ Jul-31-2021 13:46:17: Path: /orders, error: relation "OrderItems" does not exist
+ Jul-31-2021 13:46:45: Path: /orders, error: relation "OrderItems" does not exist
+ Jul-31-2021 13:47:32: Path: /orders, error: relation "OrderItems" does not exist
+ Jul-31-2021 13:53:25: Path: /orders, Error: Table Orders does not have a column or property named userId
+ Jul-31-2021 13:54:07: Path: /orders, Error: Table Orders does not have a column or property named userId
+ Jul-31-2021 13:54:29: Path: /orders, Error: A query must have either text or a name. Supplying neither is unsupported.
+ Jul-31-2021 13:55:08: Path: /orders, error: relation "Orders" does not exist
+ Jul-31-2021 13:55:37: Path: /orders, AssertionError [ERR_ASSERTION]: Error while trying to add a non-existant node to a query
+ Jul-31-2021 13:55:49: Path: /orders, error: relation "Orders" does not exist
+ Jul-31-2021 13:57:31: Path: /orders, TypeError: Cannot read property 'replace' of undefined
+ Jul-31-2021 13:59:03: Path: /orders, error: column "restaurantId" of relation "orders" does not exist
+ Jul-31-2021 13:59:26: Path: /orders, Error: Table orders does not have a column or property named restaurantId
+ Jul-31-2021 13:59:57: Path: /orders, error: column "restaurantId" of relation "orders" does not exist
+ Jul-31-2021 14:00:11: Path: /orders, Error: Table orders does not have a column or property named restaurantId
+ Jul-31-2021 14:00:30: Path: /orders, error: column "totalAmount" of relation "orders" does not exist
+ Jul-31-2021 14:25:18: Path: /orders, error: null value in column "userid" violates not-null constraint
+ Jul-31-2021 14:26:56: Path: /orders, error: null value in column "userid" violates not-null constraint
+ Jul-31-2021 14:27:30: Path: /orders, Error: Table orders does not have a column or property named userid
+ Jul-31-2021 14:28:06: Path: /orders, error: column "itemId" of relation "orderitems" does not exist
+ Jul-31-2021 14:30:06: Path: /orders, Error: Table orderitems does not have a column or property named itemId
+ Jul-31-2021 14:33:26: Path: /orders, ReferenceError: orderId is not defined
+ Jul-31-2021 14:33:46: Path: /orders, error: column "orderid" of relation "orderitems" does not exist
+ Jul-31-2021 14:44:45: Path: /orders, error: null value in column "orderId" violates not-null constraint
+ Jul-31-2021 14:45:17: Path: /orders, error: null value in column "orderId" violates not-null constraint
+ Jul-31-2021 14:45:42: Path: /orders, error: null value in column "orderId" violates not-null constraint
+ Jul-31-2021 14:46:03: Path: /orders, error: null value in column "orderId" violates not-null constraint
+ Jul-31-2021 14:47:11: Path: /orders, error: null value in column "orderId" violates not-null constraint
+ Jul-31-2021 14:55:44: Path: /orders, error: value too long for type character(1)
+ Jul-31-2021 15:14:14: Path: /orders/41, error: column "orderid" does not exist
+ Jul-31-2021 15:16:47: Path: /orders/41, error: invalid input syntax for integer: "Preparing"
+ Jul-31-2021 15:18:32: Path: /orders/41, error: syntax error at or near "WHERE"
+ Jul-31-2021 15:19:06: Path: /orders/41, error: syntax error at or near "WHERE"
+ Jul-31-2021 15:19:26: Path: /orders/41, error: syntax error at or near "WHERE"
+ Jul-31-2021 16:09:29: Path: /orders/41, ReferenceError: restaurantId is not defined
+ Jul-31-2021 16:10:03: Path: /orders/41, TypeError: queryGetOrderById is not a function
+ Jul-31-2021 16:10:32: Path: /orders/41, error: column "orderid" does not exist
+ Jul-31-2021 16:10:56: Path: /orders/41, error: column "orderid" does not exist
+ Jul-31-2021 16:27:49: Path: /orders/restaurant/1, error: column "userid" does not exist
+ Jul-31-2021 17:12:55: Path: /orders/restaurant/1233, error: null value in column "userId" violates not-null constraint
+ Jul-31-2021 17:13:04: Path: /orders/restaurant/1233, error: null value in column "userId" violates not-null constraint
+ Jul-31-2021 17:13:27: Path: /orders/restaurant/1233, error: null value in column "userId" violates not-null constraint
+ Jul-31-2021 17:16:23: Path: /orders/restaurant/1234, error: null value in column "totalAmount" violates not-null constraint
+ Jul-31-2021 17:16:36: Path: /orders/restaurant/1234, error: null value in column "totalAmount" violates not-null constraint
+ Jul-31-2021 17:18:06: Path: /orders/restaurant/1234, error: null value in column "status" violates not-null constraint

@@ -1,0 +1,134 @@
+openapi: 3.0.0
+info:
+  title: Ordes API
+
+tags:
+  - name: order
+    description: Restaurants order management service
+servers:
+  - url: http://localhost:9000/orders
+paths:
+  /{orderId}:
+    get:
+      tags:
+        - order
+      summary: Returns order by id.
+      parameters:
+        - name: orderId
+          in: path
+          description: Order ID
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: Successful operation
+
+    patch:
+      tags:
+        - order
+      summary: Update order status
+      parameters:
+        - name: orderId
+          in: path
+          description: Order ID
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: Order Status
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+      responses:
+        "200":
+          description: Successful operation
+
+    delete:
+      tags:
+        - order
+      summary: Cancel order
+      parameters:
+        - name: orderId
+          in: path
+          description: Order ID
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: Successful operation
+
+  /restaurant/{restaurantId}:
+    post:
+      tags:
+        - order
+      summary: Place new order.
+      parameters:
+        - name: restaurantId
+          in: path
+          description: restaurantId ID
+          required: true
+          schema:
+            type: string
+        - name: access-token
+          in: header
+          required: true
+      requestBody:
+        description: Order json
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/definations/Order"
+      responses:
+        "200":
+          description: Successful operation
+        "500":
+          description: DB error
+
+    get:
+      tags:
+        - order
+      summary: Returns orders by restaurant id.
+      parameters:
+        - name: restaurantId
+          in: path
+          description: restaurantId ID
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successful operation
+        "500":
+          description: DB error
+
+definations:
+  Order:
+    type: object
+    properties:
+      userId:
+        type: string
+      totalAmount:
+        type: integer
+      items:
+        type: array
+        items:
+          properties:
+            itemId:
+              type: string
+            itemName:
+              type: string
+            quantity:
+              type: integer
+            price:
+              type: integer
