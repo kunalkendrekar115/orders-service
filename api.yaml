@@ -116,8 +116,6 @@ definations:
   Order:
     type: object
     properties:
-      userId:
-        type: string
       totalAmount:
         type: integer
       items:

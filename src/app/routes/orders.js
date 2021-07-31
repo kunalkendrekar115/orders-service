@@ -10,7 +10,7 @@ const {
   cancelOrder
 } = require("../controllers");
 
-const { isValidData, validRatingData } = require("./helpers");
+const { orderRequestSchema, validateResourceMW } = require("./helpers");
 
 const router = express.Router();
 
@@ -20,7 +20,12 @@ router.delete("/:orderId", cancelOrder);
 
 router.get("/user", verifyToken, getOrderByUser);
 
-router.post("/restaurant/:restaurantId", verifyToken, placeOrder);
+router.post(
+  "/restaurant/:restaurantId",
+  verifyToken,
+  validateResourceMW(orderRequestSchema),
+  placeOrder
+);
 router.get("/restaurant/:restaurantId", getOrderByRestaurant);
 
 module.exports = { router };

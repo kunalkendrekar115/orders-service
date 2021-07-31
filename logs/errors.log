@@ -53,3 +53,25 @@
  Jul-31-2021 17:16:23: Path: /orders/restaurant/1234, error: null value in column "totalAmount" violates not-null constraint
  Jul-31-2021 17:16:36: Path: /orders/restaurant/1234, error: null value in column "totalAmount" violates not-null constraint
  Jul-31-2021 17:18:06: Path: /orders/restaurant/1234, error: null value in column "status" violates not-null constraint
+ Jul-31-2021 19:40:40: Path: /orders/restaurant/123, JsonWebTokenError: jwt malformed
+ Jul-31-2021 19:42:01: Path: /orders/restaurant/123, error: value too long for type character(1)
+ Jul-31-2021 19:42:30: Path: /orders/restaurant/123, error: null value in column "totalAmount" violates not-null constraint
+ Jul-31-2021 19:44:42: Path: /orders/restaurant/123, error: null value in column "totalAmount" violates not-null constraint
+ Jul-31-2021 19:46:06: Path: /orders/restaurant/123, error: null value in column "totalAmount" violates not-null constraint
+ Jul-31-2021 19:46:52: Path: /orders/restaurant/123, error: null value in column "totalAmount" violates not-null constraint
+ Jul-31-2021 19:47:24: Path: /orders/restaurant/123, ValidationError: Total amou tis required
+ Jul-31-2021 19:50:11: Path: /orders/restaurant/123, SyntaxError: Unexpected token t in JSON at position 6
+ Jul-31-2021 19:52:29: Path: /orders/restaurant/123, SyntaxError: Unexpected token t in JSON at position 6
+ Jul-31-2021 19:53:08: Path: /orders/restaurant/123, ValidationError: Total amout is required
+ Jul-31-2021 19:53:27: Path: /orders/restaurant/123, ValidationError: Total amout is required
+ Jul-31-2021 19:54:04: Path: /orders/restaurant/123, error: value too long for type character(1)
+ Jul-31-2021 19:58:45: Path: /orders/restaurant/123, error: value too long for type character(1)
+ Jul-31-2021 20:49:08: Path: /orders/restaurant/60fea0d36423db7aa4440b23, SyntaxError: Unexpected token ] in JSON at position 129
+ Jul-31-2021 20:49:28: Path: /orders/restaurant/60fea0d36423db7aa4440b23, ValidationError: quantity is required
+ Jul-31-2021 20:51:35: Path: /orders/restaurant/60fea0d36423db7aa4440b23, ValidationError: quantity is required
+ Jul-31-2021 21:00:19: Path: /orders/restaurant/60fea0d36423db7aa4440b23, SyntaxError: Unexpected token } in JSON at position 93
+ Jul-31-2021 21:01:21: Path: /orders/restaurant/60fea0d36423db7aa4440b23, SyntaxError: Unexpected token t in JSON at position 10
+ Jul-31-2021 21:01:39: Path: /orders/restaurant/60fea0d36423db7aa4440b23, TypeError: Cannot read property 'map' of undefined
+ Jul-31-2021 21:04:21: Path: /orders/restaurant/60fea0d36423db7aa4440b23, TypeError: Cannot read property 'map' of undefined
+ Jul-31-2021 21:04:57: Path: /orders/restaurant/60fea0d36423db7aa4440b23, TypeError: Cannot read property 'map' of undefined
+ Jul-31-2021 21:09:05: Path: /orders/restaurant/60fea0d36423db7aa4440b23, SyntaxError: Unexpected token i in JSON at position 27

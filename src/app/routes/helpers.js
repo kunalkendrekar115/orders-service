@@ -1,18 +1,29 @@
-const { body, validationResult } = require("express-validator");
 const { CustomError } = require("restaurants-utils");
+const yup = require("yup");
 
-const validRatingData = () => [
-  body("ratings").notEmpty().isInt({ min: 1, max: 5 }).withMessage("valid ratings is required")
-];
+const orderRequestSchema = yup.object().shape({
+  totalAmount: yup.number().required("Total amout is required"),
+  items: yup
+    .array()
+    .of(
+      yup.object().shape({
+        itemId: yup.string().required("Item Id is required"),
+        itemName: yup.string().required("Item Name is required"),
+        quantity: yup.number().required("quantity is required"),
+        price: yup.number().required("Price is required")
+      })
+    )
+    .required("min 1 item is required")
+});
 
-const isValidData = (req, res, next) => {
-  const errors = validationResult(req);
-
-  if (!errors.isEmpty()) {
-    throw new CustomError(403, errors.array());
+const validateResourceMW = (resourceSchema) => async (req, res, next) => {
+  const resource = req.body;
+  try {
+    await resourceSchema.validate(resource, { abortEarly: false });
+    next();
+  } catch (e) {
+    next(new CustomError(403, e.errors));
   }
-
-  next();
 };
 
-module.exports = { validRatingData, isValidData };
+module.exports = { orderRequestSchema, validateResourceMW };

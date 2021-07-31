@@ -14,6 +14,7 @@ const placeOrder = async (req, res, next) => {
   try {
     const order = req.body;
     const { restaurantId } = req.params;
+
     const queryString = queryInsertOrder({ ...order, restaurantId, status: "Placed" });
 
     const { rows } = await dbClient.query(queryString);

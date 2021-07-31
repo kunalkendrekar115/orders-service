@@ -14,10 +14,11 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.3",
     "pg": "^8.7.1",
-    "restaurants-utils": "^1.0.10",
+    "restaurants-utils": "^1.1.0",
     "sql": "^0.78.0",
     "swagger-jsdoc": "^6.1.0",
-    "swagger-ui-express": "^4.1.6"
+    "swagger-ui-express": "^4.1.6",
+    "yup": "^0.32.9"
   },
   "author": "",
   "license": "ISC"
