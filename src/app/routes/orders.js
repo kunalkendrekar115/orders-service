@@ -18,7 +18,7 @@ router.get("/:orderId", getOrderById);
 router.patch("/:orderId", updateOrderStatus);
 router.delete("/:orderId", cancelOrder);
 
-router.get("/user", verifyToken, getOrderByUser);
+router.get("/user/:userId", getOrderByUser);
 
 router.post(
   "/restaurant/:restaurantId",

@@ -67,6 +67,23 @@ paths:
         "200":
           description: Successful operation
 
+  /user/{userId}:
+    get:
+      tags:
+        - order
+      summary: Get orders by user
+      parameters:
+        - name: userId
+          in: path
+          description: User Id
+          required: true
+          schema:
+            type: string
+
+      responses:
+        "200":
+          description: Successful operation
+
   /restaurant/{restaurantId}:
     post:
       tags:

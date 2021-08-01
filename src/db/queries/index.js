@@ -1,17 +1,15 @@
 const sql = require("sql");
 sql.setDialect("postgres");
 
-const queryGetOrderByUser = (userId) => ({
-  name: "fetch-user-order",
-  text: "SELECT * FROM orders WHERE userId = $1",
-  values: [userId]
-});
+const queryGetOrderByUser = (userId) => {
+  return `SELECT a.*, array_to_json(array_agg(row_to_json(u.*))) as orderItems 
+  FROM orders a INNER JOIN orderitems u USING("orderId") where "userId"='${userId}' GROUP BY "orderId"`;
+};
 
-const queryGetOrderById = (orderId) => ({
-  name: "fetch-order",
-  text: `SELECT * FROM orders WHERE "orderId" = $1`,
-  values: [orderId]
-});
+const queryGetOrderById = (orderId) => {
+  return `SELECT a.*, array_to_json(array_agg(row_to_json(u.*))) as orderItems 
+  FROM orders a INNER JOIN orderitems u USING("orderId") where "orderId"='${orderId}' GROUP BY "orderId"`;
+};
 
 const queryUpdateOrderStatus = (status, orderId) => ({
   name: "update order status",
@@ -19,11 +17,10 @@ const queryUpdateOrderStatus = (status, orderId) => ({
   values: [status, orderId]
 });
 
-const queryGetOrdersByRestaurant = (restaurantId) => ({
-  name: "fetch-user-order",
-  text: `SELECT * FROM orders WHERE "restaurantId" = $1`,
-  values: [restaurantId]
-});
+const queryGetOrdersByRestaurant = (restaurantId) => {
+  return `SELECT a.*, array_to_json(array_agg(row_to_json(u.*))) as orderItems 
+  FROM orders a INNER JOIN orderitems u USING("orderId") where "restaurantId"='${restaurantId}' GROUP BY "orderId"`;
+};
 
 const queryInsertOrder = (orderPayload) => {
   const { restaurantId, userId, status, totalAmount } = orderPayload;

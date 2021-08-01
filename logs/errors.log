@@ -75,3 +75,68 @@
  Jul-31-2021 21:04:21: Path: /orders/restaurant/60fea0d36423db7aa4440b23, TypeError: Cannot read property 'map' of undefined
  Jul-31-2021 21:04:57: Path: /orders/restaurant/60fea0d36423db7aa4440b23, TypeError: Cannot read property 'map' of undefined
  Jul-31-2021 21:09:05: Path: /orders/restaurant/60fea0d36423db7aa4440b23, SyntaxError: Unexpected token i in JSON at position 27
+ Aug-01-2021 12:32:12: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:35:11: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:42:23: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:43:58: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:44:18: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:45:18: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:45:34: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:46:11: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:47:29: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:48:53: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:50:06: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:51:45: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:52:12: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:52:27: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:52:48: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:53:06: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:54:08: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:54:24: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:55:18: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 12:55:54: Path: /orders/user, error: invalid input syntax for integer: "user"
+ Aug-01-2021 13:00:05: Path: /orders/user/123, error: bind message supplies 1 parameters, but prepared statement "fetch-user-order" requires 0
+ Aug-01-2021 13:00:43: Path: /orders/user/123, error: bind message supplies 1 parameters, but prepared statement "fetch-user-order" requires 0
+ Aug-01-2021 13:18:49: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near "userId"
+ Aug-01-2021 13:19:01: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near "userId"
+ Aug-01-2021 13:20:02: Path: /orders/user/61063e57ec601b04b2873403, error: bind message supplies 1 parameters, but prepared statement "fetch-user-order" requires 0
+ Aug-01-2021 13:20:25: Path: /orders/user/61063e57ec601b04b2873403, error: bind message supplies 1 parameters, but prepared statement "fetch-user-order" requires 0
+ Aug-01-2021 14:28:41: Path: /orders/user/61063e57ec601b04b2873403, TypeError: dbClient.task is not a function
+ Aug-01-2021 14:40:14: Path: /orders/user/61063e57ec601b04b2873403, TypeError: dbClient.task is not a function
+ Aug-01-2021 14:43:01: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near "JSON"
+ Aug-01-2021 14:50:45: Path: /orders/user/61063e57ec601b04b2873403, error: column "userid" does not exist
+ Aug-01-2021 15:10:40: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near ")"
+ Aug-01-2021 15:11:33: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near ")"
+ Aug-01-2021 15:11:51: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near ")"
+ Aug-01-2021 15:12:11: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near ")"
+ Aug-01-2021 15:14:36: Path: /orders/user/61063e57ec601b04b2873403, error: column "orderid" does not exist
+ Aug-01-2021 15:15:18: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near "ec601b04b2873403"
+ Aug-01-2021 15:19:43: Path: /orders/user/61063e57ec601b04b2873403, error: column o.orderid does not exist
+ Aug-01-2021 15:20:19: Path: /orders/user/61063e57ec601b04b2873403, error: column "orderid" does not exist
+ Aug-01-2021 15:24:03: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near "61063e57"
+ Aug-01-2021 15:24:30: Path: /orders/user/61063e57ec601b04b2873403, error: missing FROM-clause entry for table "u"
+ Aug-01-2021 15:25:11: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near "inner"
+ Aug-01-2021 15:26:07: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near "inner"
+ Aug-01-2021 15:26:43: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near "inner"
+ Aug-01-2021 15:27:33: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near "left"
+ Aug-01-2021 15:27:49: Path: /orders/user/61063e57ec601b04b2873403, error: schema "o" does not exist
+ Aug-01-2021 15:28:34: Path: /orders/user/61063e57ec601b04b2873403, error: schema "orders" does not exist
+ Aug-01-2021 15:28:52: Path: /orders/user/61063e57ec601b04b2873403, error: schema "orders" does not exist
+ Aug-01-2021 15:29:16: Path: /orders/user/61063e57ec601b04b2873403, error: schema "o" does not exist
+ Aug-01-2021 15:30:45: Path: /orders/user/61063e57ec601b04b2873403, error: column reference "orderId" is ambiguous
+ Aug-01-2021 15:31:01: Path: /orders/user/61063e57ec601b04b2873403, error: invalid reference to FROM-clause entry for table "orders"
+ Aug-01-2021 15:31:25: Path: /orders/user/61063e57ec601b04b2873403, error: schema "o" does not exist
+ Aug-01-2021 15:31:44: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near "inner"
+ Aug-01-2021 15:32:07: Path: /orders/user/61063e57ec601b04b2873403, error: invalid reference to FROM-clause entry for table "orders"
+ Aug-01-2021 15:32:44: Path: /orders/user/61063e57ec601b04b2873403, error: schema "o" does not exist
+ Aug-01-2021 15:35:01: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near ")"
+ Aug-01-2021 15:35:09: Path: /orders/user/61063e57ec601b04b2873403, error: schema "o" does not exist
+ Aug-01-2021 15:37:55: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at or near "select"
+ Aug-01-2021 15:41:00: Path: /orders/user/61063e57ec601b04b2873403, error: syntax error at end of input
+ Aug-01-2021 15:41:31: Path: /orders/user/61063e57ec601b04b2873403, error: column "orderid" specified in USING clause does not exist in left table
+ Aug-01-2021 15:47:02: Path: /orders/user/61063e57ec601b04b2873403, error: column "a.orderId" must appear in the GROUP BY clause or be used in an aggregate function
+ Aug-01-2021 16:07:09: Path: /orders/restaurant/60fea0d36423db7aa4440b23, Error: Client has already been connected. You cannot reuse a client.
+ Aug-01-2021 16:08:16: Path: /orders/restaurant/60fea0d36423db7aa4440b23, Error: Client has already been connected. You cannot reuse a client.
+ Aug-01-2021 16:09:03: Path: /orders/restaurant/60fea0d36423db7aa4440b23, TypeError: dbClient.release is not a function
+ Aug-01-2021 16:13:01: Path: /orders/restaurant/61063e57ec601b04b2873403, SyntaxError: Unexpected token ] in JSON at position 169
+ Aug-01-2021 16:13:10: Path: /orders/restaurant/61063e57ec601b04b2873403, TokenExpiredError: jwt expired

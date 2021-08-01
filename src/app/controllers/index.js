@@ -70,9 +70,14 @@ const getOrderById = async (req, res, next) => {
 
 const getOrderByUser = async (req, res, next) => {
   try {
-    const result = await dbClient.query(queryGetOrderByUser(req.userId));
+    const { userId } = req.params;
+    if (!userId) throw new CustomError(403, "User id is missing");
 
-    res.status(200).json(result.rows);
+    const queryString = queryGetOrderByUser(userId);
+
+    const { rows } = await dbClient.query(queryString);
+
+    res.status(200).json(rows);
   } catch (error) {
     console.log(error);
     next(error);

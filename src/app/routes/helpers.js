@@ -13,6 +13,7 @@ const orderRequestSchema = yup.object().shape({
         price: yup.number().required("Price is required")
       })
     )
+    .min(1)
     .required("min 1 item is required")
 });
 
