@@ -25,6 +25,9 @@ paths:
         "200":
           description: Successful operation
 
+        "500":
+          description: DB Error
+
     patch:
       tags:
         - order

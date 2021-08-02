@@ -62,7 +62,8 @@ const getOrderById = async (req, res, next) => {
     }
 
     const { rows } = await dbClient.query(queryGetOrderById(orderId));
-    res.status(200).json(rows[0]);
+
+    res.status(200).json(rows);
   } catch (error) {
     next(error);
   }
