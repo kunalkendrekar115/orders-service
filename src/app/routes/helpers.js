@@ -1,4 +1,5 @@
 const { CustomError } = require("restaurants-utils");
+const axios = require("axios");
 const yup = require("yup");
 
 const orderRequestSchema = yup.object().shape({
@@ -27,4 +28,19 @@ const validateResourceMW = (resourceSchema) => async (req, res, next) => {
   }
 };
 
-module.exports = { orderRequestSchema, validateResourceMW };
+const checkValidRestaurantMw = async (req, res, next) => {
+  try {
+    const { restaurantId } = req.params;
+
+    if (!restaurantId) {
+      throw new CustomError(403, "Restaurant id id is missing in url");
+    }
+
+    const restaurant = await axios.get(`http://localhost:4000/restaurants/${restaurantId}`);
+    if (restaurant) next();
+  } catch ({ response }) {
+    next(new CustomError(response.status, response.data));
+  }
+};
+
+module.exports = { orderRequestSchema, validateResourceMW, checkValidRestaurantMw };

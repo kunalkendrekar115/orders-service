@@ -10,6 +10,8 @@ const {
   queryUpdateOrderStatus
 } = require("../../db");
 
+const { sendMessage: sendOrderStatus } = require("../../socket-server");
+
 const placeOrder = async (req, res, next) => {
   try {
     const order = req.body;
@@ -94,9 +96,11 @@ const updateOrderStatus = async (req, res, next) => {
     if (!orderId) {
       throw new CustomError("order id is nissing");
     }
-    const { rows } = await dbClient.query(queryUpdateOrderStatus(status, orderId));
+    const data = await dbClient.query(queryUpdateOrderStatus(status, orderId));
 
-    res.status(200).json(rows[0]);
+    sendOrderStatus(`OrderId: ${orderId} , Status: ${status} `);
+
+    res.status(200).json({ orderId, status });
   } catch (error) {
     next(error);
   }

@@ -10,7 +10,7 @@ const {
   cancelOrder
 } = require("../controllers");
 
-const { orderRequestSchema, validateResourceMW } = require("./helpers");
+const { orderRequestSchema, validateResourceMW, checkValidRestaurantMw } = require("./helpers");
 
 const router = express.Router();
 
@@ -22,10 +22,11 @@ router.get("/user/:userId", getOrderByUser);
 
 router.post(
   "/restaurant/:restaurantId",
+  checkValidRestaurantMw,
   verifyToken,
   validateResourceMW(orderRequestSchema),
   placeOrder
 );
-router.get("/restaurant/:restaurantId", getOrderByRestaurant);
+router.get("/restaurant/:restaurantId", checkValidRestaurantMw, getOrderByRestaurant);
 
 module.exports = { router };

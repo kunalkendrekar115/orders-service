@@ -54,6 +54,9 @@ paths:
         "200":
           description: Successful operation
 
+        "500":
+          description: DB Error
+
     delete:
       tags:
         - order
